@@ -19,11 +19,11 @@ modules:
 
   - type: dnf
     install:
+      - https://zfsonlinux.org/epel/zfs-release-3-0$(rpm --eval "%{dist}").noarch.rpm
       packages:
         - epel-release
         - podman
         - podman-docker
-        - https://zfsonlinux.org/epel/zfs-release-3-0$(rpm --eval "%{dist}").noarch.rpm
         - kernel-devel
         - zfs
 
