@@ -18,13 +18,9 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: dnf
-    repo:
-      files:
-        - https://zfsonlinux.org/epel/zfs-release-2-3$(rpm --eval "%{dist}").noarch.rpm
     install:
       packages:
         - epel-release
-        - zfs
         - podman
         - podman-docker
 
