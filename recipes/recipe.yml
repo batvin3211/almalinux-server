@@ -18,6 +18,10 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: dnf
+    group-install:
+      with-optional: true
+      packages:
+        - server
     install:
       - https://zfsonlinux.org/epel/zfs-release-3-0$(rpm --eval "%{dist}").noarch.rpm
       packages:
