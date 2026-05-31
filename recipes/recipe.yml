@@ -23,12 +23,11 @@ modules:
       packages:
         - server
     install:
-      - https://zfsonlinux.org/epel/zfs-release-3-0$(rpm --eval "%{dist}").noarch.rpm
       packages:
         - epel-release
         - podman
         - podman-docker
         - kernel-devel
-        - zfs
+        - https://zfsonlinux.org/epel/zfs-release-3-0$(rpm --eval "%{dist}").noarch.rpm
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
