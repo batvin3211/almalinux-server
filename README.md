@@ -34,6 +34,12 @@ The `latest` tag will automatically point to the latest build. That build will s
 
 If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/how-to/generate-iso/#_top). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
 
+ISO build command
+```
+sudo bluebuild generate-iso --iso-name almalinux-image.iso image ghcr.io/batvin3211/almalinux-server:latest
+```
+
+
 ## Verification
 
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
