@@ -21,7 +21,7 @@ modules:
     group-install:
       with-optional: true
       packages:
-        - server
+        - workstation
     install:
       packages:
         - epel-release
